@@ -1,0 +1,22 @@
+.doctor { position: relative; }
+.doctor a::after { content: ""; position: absolute; inset: 0; }
+.doctor:focus-within { outline: 3px solid var(--gold); outline-offset: 5px; }
+.doctor:hover h3 { color: var(--gold); }
+section.map-section { padding-top: 0; }
+.maps, .profile-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.maps { margin-top: 2rem; }
+.maps article { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.maps h3 { font-size: 2rem; margin: 0; }
+.maps p { margin: .75rem 0 1rem; }
+.maps iframe { width: 100%; height: clamp(17rem, 25vw, 23rem); display: block; border: 1px solid var(--line); margin-bottom: 1rem; }
+.profile { padding: 2rem 0 5rem; }
+.profile-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); margin-top: 2rem; }
+.profile-layout img { width: 100%; max-height: 32rem; object-fit: cover; object-position: center 25%; }
+.profile h1 { font-size: clamp(2.75rem, 5vw, 5rem); margin-top: 0; }
+.profile h2 { font-size: 1.85rem; margin-top: 2rem; }
+.profile article p { max-width: 62ch; }
+.profile .sources { padding-top: 1rem; border-top: 1px solid var(--line); }
+@media (max-width: 700px) {
+  .maps, .profile-layout { grid-template-columns: 1fr; }
+  .profile-layout img { max-height: 18rem; }
+}
